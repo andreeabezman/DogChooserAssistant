@@ -1,0 +1,5811 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<category>
+    <pattern>Hello</pattern>
+    <template>Hi</template>
+</category>
+<category>
+    <pattern>Hi</pattern>
+    <template><srai>Hello</srai></template>
+</category>
+<category>
+    <pattern>Hello *</pattern>
+    <template><srai>Hello</srai></template>
+</category>
+<category>
+    <pattern>Good morning</pattern>
+    <template><srai>Hello</srai></template>
+</category>
+<category>
+    <pattern>Good afternoon</pattern>
+    <template>Hello</template>
+</category>
+<category>
+    <pattern>What can you do</pattern>
+    <template>My name is Luna. I will help you to find te right dog breed for you.
+     <br />How much do you like dogs?
+
+    </template>
+</category>
+<category>
+    <pattern>A lot</pattern>
+    <template><srai>i want a dog</srai></template>
+</category>
+<category>
+    <pattern>I do not like dogs</pattern>
+    <template>That's sad</template>
+</category>
+<category>
+    <pattern>Who are you</pattern>
+    <template><srai>What can you do</srai></template>
+</category>
+    <category>
+        <pattern>I live in * </pattern>
+        <template>
+            Nice city <set name="oras"><star /></set>
+        </template>
+    </category>
+<category>
+    <pattern>My name is *</pattern>
+    <template>
+        <think><set name="username"></set></think>
+        Nice to meet you <star>*</star> <get name="username"></get>
+    </template>
+</category>
+<category>
+    <pattern>Guide me to find the right dog breed</pattern>
+    <template><srai>I want a dog</srai></template>
+</category>
+<category>
+    <pattern>I want a dog</pattern>
+    <template>Ok. What size do you want?Choose from the following:
+         <ul>
+                  <li>Little</li>
+                  <li>Medium</li>
+                  <li>Large</li>
+                  <li>Giant</li>
+         </ul>
+    <think>
+        <set name="topic">size</set>
+    </think>
+    </template>
+</category>
+<category>
+    <pattern>*</pattern>
+    <template>I don't have an answer for that.</template>
+</category>
+<topic name="size">
+    <category>
+        <pattern>large</pattern>
+        <template>
+            <think>
+                <set name="topic">large</set>
+            </think>
+            What personality do you want?
+            Choose one from this:
+             <br />
+             <ul>
+                 <li>Friendly</li>
+                 <li>Independent</li>
+                 <li>Loyal</li>
+                 <li>Aggressive</li>
+             </ul>
+        </template>
+    </category>
+    <category>
+        <pattern>Show me all large dogs</pattern>
+        <template>
+            <think>
+            <set name="topic">large</set>
+            </think>
+<ul>
+<li>West Siberian Laika</li>
+<li>Tosa</li>
+<li>Beauceron</li>
+<li>Bullmastiff</li>
+<li>Rhodesian Ridgeback</li>
+<li>Gordon Setter</li>
+<li>Tibetan Mastiff</li>
+<li>Dogue De Bordeauxv</li>
+<li>Irish Red and White Setter</li>
+<li>Polish Tatra Sheepdog</li>
+<li>Anatolian Shepherd dog</li>
+<li>Bull Arab</li>
+<li>Irish Setter</li>
+<li>Curly Coated Retriever</li>
+<li>Ibizan Hound</li>
+<li>Afghan Hound</li>
+<li>Bloodhound</li>
+<li>Komondor</li>
+<li>Saarloos Wolfdog</li>
+<li>Borzoi</li>
+<li>Collie</li>
+<li>Golden Retriever</li>
+<li>Dalmatian</li>
+<li>Flat Coated Retriever</li>
+<li>Alaskan Malamute</li>
+<li>Chinook</li>
+<li>Bluetick Coonhound</li>
+<li>German Longhaired Pointer</li>
+<li>Moscow Watchdog</li>
+<li>Akita</li>
+</ul>
+            What personality do you want?
+            Choose one from this:
+             <br />
+             <ul>
+                 <li>Friendly</li>
+                 <li>Independent</li>
+                 <li>Loyal</li>
+                 <li>Aggressive</li>
+             </ul>
+</template>
+    </category>
+    <category>
+        <pattern>little</pattern>
+        <template>
+            What breed group do you want?<br />
+            Choose one from this:
+             <ul>
+                 <li>Terrier</li>
+                 <li>Northern</li>
+                 <li>Hound</li>
+                 <li>Companion</li>
+             </ul>
+            <think>
+                <set name="topic">little</set>
+            </think>
+        </template>
+    </category>
+<category>
+    <pattern>Show me all little dogs</pattern>
+    <template>
+        <think>
+            <set name="topic">little</set>
+        </think>
+<ul>
+<li>	Beagle	</li>
+<li>	Baset Bleu de Gascogne	</li>
+<li>	Dachshund	</li>
+<li>	Maltese	</li>
+<li>	Havanese	</li>
+<li>	Chinese Crested	</li>
+<li>	Pug	</li>
+<li>	Cavaler King Spaniel	</li>
+<li>	Papillon	</li>
+<li>	Pekingese	</li>
+<li>	Shih Tzu	</li>
+<li>	Japanese Chin	</li>
+<li>	Pomeranian	</li>
+<li>	Chihuahua	</li>
+<li>	Coton de Tulear	</li>
+<li>	Bolognese	</li>
+<li>	Lhasa Apso	</li>
+<li>	Bichon Frise	</li>
+<li>	Lowchen	</li>
+<li>	Schipperke	</li>
+<li>	Tibetan Spaniel	</li>
+<li>	French Bulldog	</li>
+<li>	Miniature Shar Pei	</li>
+<li>	Rat Terrier	</li>
+<li>	Manchenster Terrier	</li>
+<li>	Border Terrier	</li>
+<li>	Scottish Terrier	</li>
+<li>	Welsh Terrier	</li>
+<li>	Norwich Terrier	</li>
+<li>	Norfolk Terrier	</li>
+<li>	Sealyham Terrier	</li>
+<li>	Smooth Fox Terrier	</li>
+<li>	Jack Russell Terrier	</li>
+</ul>
+ What breed group do you want?<br />
+            Choose one from this:
+             <ul>
+                 <li>Terrier</li>
+                 <li>Northern</li>
+                 <li>Hound</li>
+                 <li>Companion</li>
+             </ul>
+    </template>
+</category>
+    <category>
+    <pattern>giant</pattern>
+    <template>What do you want?Choose one from this:
+    Companion dog, Guardian
+    <think>
+        <set name="topic">giant</set>
+    </think>
+    </template>
+</category>
+<category>
+    <pattern>Show me all giant dogs</pattern>
+    <template>
+        <think>
+            <set name="topic">giant</set>
+        </think>
+<ul>
+<li>	Irish Wolfhound	</li>
+<li>	Greyhound	</li>
+<li>	Scottish Deerhound	</li>
+<li>	King Shepherd	</li>
+<li>	Landseer	</li>
+<li>	Shiloh Shepherd Dog	</li>
+<li>	Pakistani Mastiff	</li>
+<li>	Neapolitan Mastiff	</li>
+<li>	Mastiff	</li>
+<li>	Spanish Mastiff	</li>
+<li>	Great Dane	</li>
+<li>	New Foundland	</li>
+<li>	Kuvasz	</li>
+<li>	Great Pyrenees	</li>
+<li>	Saint Bernard	</li>
+<li>	Leonberger	</li>
+
+</ul>
+Do you want a companion dog or guardian dog?
+    </template>
+</category>
+<category>
+    <pattern><set>marimi</set></pattern>
+    <template>What breed group do you want?
+     <map name="mariminext"><star/></map>
+    <think>
+        <set name="topic">medium</set>
+    </think>
+    </template>
+</category>
+<category>
+    <pattern>Show me all medium dogs</pattern>
+    <template>
+        <think><set name="topic">medium</set></think>
+        <ul>
+<li>	Soft Coated Wheaten Terrier	</li>
+<li>	Airedale Terrier	</li>
+<li>	Kerry Blue Terrier	</li>
+<li>	Australian Shepherd	</li>
+<li>	Bull Terrier	</li>
+<li>	Austrian Pinscher	</li>
+<li>	Kromfohrlander	</li>
+<li>	American Pit Bull Terrier	</li>
+<li>	Wire Fox Terrier	</li>
+<li>	Staffordshire Bull Terrier	</li>
+<li>	Africanis	</li>
+<li>	Airegeois	</li>
+<li>	Basenji	</li>
+<li>	Peruvian Inca Orchid	</li>
+<li>	Bavarian Mountain Hound	</li>
+<li>	Silken Windhound	</li>
+<li>	Pharaoh Hound	</li>
+<li>	Redbone Coonhound	</li>
+<li>	Thai Ridgeback	</li>
+<li>	Norwegian Buhund	</li>
+<li>	Samoyed	</li>
+<li>	Siberian Husky	</li>
+<li>	Korean Jindo Dog	</li>
+<li>	Black Norwegian Elkhound	</li>
+<li>	Finnish Spitz	</li>
+<li>	Swedish Lapphund	</li>
+<li>	Karelian Bear Dog	</li>
+<li>	Chow Chow	</li>
+<li>	Alaskan Klee Kai	</li>
+<li>	Shikoku	</li>
+<li>	Hokkaido	</li>
+<li>	Kishu Ken	</li>
+
+        </ul>
+    What breed group do you want?Northern?Terrier?Hound?
+    </template>
+</category>
+<category>
+    <pattern>Large *</pattern>
+    <template><srai>large</srai></template>
+</category>
+<category>
+    <pattern>* Large *</pattern>
+    <template><srai>large</srai></template>
+</category>
+<category>
+    <pattern>* Large</pattern>
+    <template><srai>large</srai></template>
+</category>
+<category>
+    <pattern>giant *</pattern>
+    <template><srai>giant</srai></template>
+</category>
+<category>
+    <pattern>* giant *</pattern>
+    <template><srai>giant</srai></template>
+</category>
+<category>
+    <pattern>* giant</pattern>
+    <template><srai>giant</srai></template>
+</category>
+<category>
+    <pattern>little *</pattern>
+    <template><srai>little</srai></template>
+</category>
+<category>
+    <pattern>* little *</pattern>
+    <template><srai>little</srai></template>
+</category>
+<category>
+    <pattern>* little</pattern>
+    <template><srai>little</srai></template>
+</category>
+<category>
+    <pattern>*</pattern>
+    <template>I do not understand</template>
+</category>
+</topic>
+<topic name="large">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for that.</template>
+    </category>
+    <category>
+        <pattern>Friendly</pattern>
+        <template>
+            <think>
+                <set name="topic">largefriendly</set>
+            </think>
+            Should your dog be playfull?
+        </template>
+    </category>
+    <category>
+        <pattern>* friendly</pattern>
+        <template><srai>friendly</srai></template>
+    </category>
+    <category>
+        <pattern>* friendly *</pattern>
+        <template><srai>friendly</srai></template>
+    </category>
+    <category>
+        <pattern>friendly *</pattern>
+        <template><srai>friendly</srai></template>
+    </category>
+    <category>
+        <pattern>Aggressive</pattern>
+        <template>
+            <think>
+                <set name="topic">largeaggressivex</set>
+            </think>
+            Do you want a specific breed group?
+        </template>
+    </category>
+    <category>
+        <pattern>* aggressive</pattern>
+        <template><srai>aggressive</srai></template>
+    </category>
+    <category>
+        <pattern>* aggressive *</pattern>
+        <template><srai>aggressive</srai></template>
+    </category>
+    <category>
+        <pattern>aggressive *</pattern>
+        <template><srai>aggressive</srai></template>
+    </category>
+    <category>
+        <pattern>Loyal</pattern>
+        <template>
+            <think>
+                <set name="topic">largeloyal</set>
+            </think>
+            Do you want the dog to be friendly to other dogs?
+        </template>
+    </category>
+    <category>
+        <pattern>* loyal</pattern>
+        <template><srai>loyal</srai></template>
+    </category>
+    <category>
+        <pattern>* loyal *</pattern>
+        <template><srai>loyal</srai></template>
+    </category>
+    <category>
+        <pattern>loyal *</pattern>
+        <template><srai>loyal</srai></template>
+    </category>
+    <category>
+        <pattern>Independent</pattern>
+        <template>
+            <think>
+                <set name="topic">largeindependent</set>
+            </think>
+            Should the dog be child friendly?
+        </template>
+    </category>
+    <category>
+        <pattern>* independent</pattern>
+        <template><srai>independent</srai></template>
+    </category>
+    <category>
+        <pattern>* independent *</pattern>
+        <template><srai>independent</srai></template>
+    </category>
+    <category>
+        <pattern>independent *</pattern>
+        <template><srai>independent</srai></template>
+    </category>
+</topic>
+<topic name="largeaggressivex">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            Choose between hound or guardian dog.
+            <think>
+                <set name="topic">largeaggressive</set>
+            </think>
+        </template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>no</pattern>
+        <template>Should your dog need a moderate maintenance or low maintenance?
+            <think>
+                <set name="topic">largeaggressivelowmoderate</set>
+            </think>
+        </template>
+    </category>
+<topic name="largeaggressivelowmoderate">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>moderate</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is West Siberian Laika.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/West-Siberian-Laika.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* moderate</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+    <category>
+        <pattern>* moderate *</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+    <category>
+        <pattern>moderate *</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+    <category>
+        <pattern>low</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Tosa.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Tosa-dog.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* low</pattern>
+        <template><srai>low</srai></template>
+    </category>
+    <category>
+        <pattern>* low *</pattern>
+        <template><srai>low</srai></template>
+    </category>
+    <category>
+        <pattern>low *</pattern>
+        <template><srai>low</srai></template>
+    </category>
+</topic>
+</topic>
+<topic name="largefriendly">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>yes</pattern>
+        <template>
+            <think>
+                <set name="topic">largefriendlyxplayfull</set>
+                </think>
+            Would you like a dog that gets along with other dogs?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should be playfull</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>no</pattern>
+        <template>
+            <think>
+                <set name="topic">largefriendlyxplayfullnot</set>
+                </think>
+            Would you like a breed that is good at guarding?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should not be playfull</pattern>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>no *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+</topic>
+<topic name="largefriendlyxplayfullnot">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+                <set name="topic">largefriendlyxplaynotguard</set>
+            </think>
+            Should your pet need a moderate maintenance or low?
+        </template>
+    </category>
+    <category>
+        <template>I would not like *</template>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>I would not like</pattern>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>no *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Akita.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/American-Akita.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <template>I would like *</template>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>I would like</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>yes *</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+</topic>
+<topic name="largefriendlyxplaynotguard">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>low</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Bluetick Coonhound.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Bluetick-Coonhound.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>low *</pattern>
+        <template><srai>low</srai></template>
+    </category>
+    <category>
+        <pattern>* low *</pattern>
+        <template><srai>low</srai></template>
+    </category>
+    <category>
+        <pattern>* low</pattern>
+        <template><srai>low</srai></template>
+    </category>
+    <category>
+        <pattern>moderate</pattern>
+        <template>
+            <think>
+                <set name="topic">largefriendlybulky</set>
+            </think>
+            Do you want a bulky dog?
+        </template>
+    </category>
+    <category>
+        <pattern>moderate *</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+    <category>
+        <pattern>* moderate *</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+    <category>
+        <pattern>* moderate</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+</topic>
+<topic name="largefriendlybulky">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>Bulky</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Moscow Watchdog.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Moscow-Watchdog.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>yes</pattern>
+        <template><srai>bulky</srai></template>
+    </category>
+    <category>
+        <pattern>yes *</pattern>
+        <template><srai>bulky</srai></template>
+    </category>
+        <category>
+        <pattern>bulky *</pattern>
+        <template><srai>bulky</srai></template>
+    </category>
+    <category>
+        <pattern>* bulky *</pattern>
+        <template><srai>bulky</srai></template>
+    </category>
+    <category>
+        <pattern>not Bulky</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is German Long Haired Pointer.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/German-Longhaired-Pointer.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>no</pattern>
+        <template><srai>not bulky</srai></template>
+    </category>
+    <category>
+        <pattern>no *</pattern>
+        <template><srai>not bulky</srai></template>
+    </category>
+        <category>
+        <pattern>not bulky *</pattern>
+        <template><srai>not bulky</srai></template>
+    </category>
+            <category>
+        <pattern>* not bulky *</pattern>
+        <template><srai>not bulky</srai></template>
+    </category>
+</topic>
+<topic name="largefriendlyxplayfull">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>yes</pattern>
+        <template>
+            <think>
+                <set name="topic">largefriendlyplayfull</set>
+            </think>
+            Do you want a dog that requires a moderate maintenance, low maintenance or high maintenance?
+        </template>
+    </category>
+    <category>
+        <pattern>I would like *</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>yes *</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>no</pattern>
+        <template>
+            <think>
+                <set name="topic">largefriendlyplayfullnot</set>
+            </think>
+            Would you like your dog to be intelligent?
+        </template>
+    </category>
+    <category>
+        <pattern>I would not like *</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>no *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+</topic>
+<topic name="largefriendlyplayfullnot">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Alaskan Malamute.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Alaskan-Malamute.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>I would like my dog to be intelligent</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Chinook.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Chinook-dog.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>I would not *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>no *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+</topic>
+<topic name="largefriendlyplayfull">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>high</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Collie.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Rough-Collie.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>high *</pattern>
+        <template><srai>high</srai></template>
+    </category>
+    <category>
+        <pattern>* high *</pattern>
+        <template><srai>high</srai></template>
+    </category>
+    <category>
+        <pattern>* high</pattern>
+        <template><srai>high</srai></template>
+    </category>
+    <category>
+        <pattern>moderate</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Golden Retriever.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Golden-Retriever.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>moderate *</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+    <category>
+        <pattern>* moderate *</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+    <category>
+        <pattern>* moderate</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+    <category>
+        <pattern>low</pattern>
+        <template>
+            <think>
+            <set name="topic">largefriendlyloww</set>
+            </think>
+            How much do you want to pay for the dog?More than 1000 USD?Less than 1000 USD?
+        </template>
+    </category>
+    <category>
+        <pattern>low *</pattern>
+        <template><srai>low</srai></template>
+    </category>
+    <category>
+        <pattern>* low *</pattern>
+        <template><srai>low</srai></template>
+    </category>
+    <category>
+        <pattern>* low</pattern>
+        <template><srai>low</srai></template>
+    </category>
+</topic>
+<topic name="largefriendlyloww">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>More</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Flat Coated Retriever.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Flat-Coated-Retriever.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>more *</pattern>
+        <template><srai>more</srai></template>
+    </category>
+    <category>
+        <pattern>* more *</pattern>
+        <template><srai>more</srai></template>
+    </category>
+    <category>
+        <pattern>* more</pattern>
+        <template><srai>more</srai></template>
+    </category>
+    <category>
+        <pattern>Less</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Dalmatian.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Dalmatian.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>less *</pattern>
+        <template><srai>less</srai></template>
+    </category>
+    <category>
+        <pattern>* less *</pattern>
+        <template><srai>less</srai></template>
+    </category>
+    <category>
+        <pattern>* less</pattern>
+        <template><srai>less</srai></template>
+    </category>
+</topic>
+<topic name="largeindependent">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            Do you want a dog with good watchdog ability?
+        <think>
+            <set name="topic">largeindependentkid</set>
+        </think>
+        </template>
+        <category>
+            <pattern>The dog should be child friendly</pattern>
+            <template><srai>yes</srai></template>
+        </category>
+        <category>
+            <pattern>Yes *</pattern>
+            <template><srai>Yes</srai></template>
+        </category>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            Do you want a dog with strong watchdog ability or low?
+        <think>
+            <set name="topic">largeindependentkidno</set>
+        </think>
+        </template>
+        <category>
+            <pattern>The dog should not be child friendly</pattern>
+            <template><srai>no</srai></template>
+        </category>
+        <category>
+            <pattern>no *</pattern>
+            <template><srai>no</srai></template>
+        </category>
+    </category>
+</topic>
+<topic name="largeindependentkidno">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>strong</pattern>
+        <template>
+            How should be the coat?Long?Short?
+            <think>
+                <set name="topic">largeindependentkidnocoat</set>
+            </think>
+        </template>
+    </category>
+    <category>
+        <pattern>strong *</pattern>
+        <template><srai>strong</srai></template>
+    </category>
+        <category>
+        <pattern>* strong *</pattern>
+        <template><srai>strong</srai></template>
+    </category>
+        <category>
+        <pattern>* strong</pattern>
+        <template><srai>strong</srai></template>
+    </category>
+        <category>
+        <pattern>yes</pattern>
+        <template><srai>strong</srai></template>
+    </category>
+    <category>
+        <pattern>low</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Borzoi.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Borzoi.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>low *</pattern>
+        <template><srai>low</srai></template>
+    </category>
+    <category>
+        <pattern>no</pattern>
+        <template><srai>low</srai></template>
+    </category>
+        <category>
+        <pattern>* low *</pattern>
+        <template><srai>low</srai></template>
+    </category>
+        <category>
+        <pattern>* low</pattern>
+        <template><srai>low</srai></template>
+    </category>
+</topic>
+<topic name="largeindependentkidnocoat">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>long</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Komondor.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Komondor.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>long *</pattern>
+        <template><srai>long</srai></template>
+    </category>
+        <category>
+        <pattern>* long *</pattern>
+        <template><srai>long</srai></template>
+    </category>
+        <category>
+        <pattern>* long</pattern>
+        <template><srai>long</srai></template>
+    </category>
+    <category>
+        <pattern>short</pattern>
+        <template>
+            <think>
+                <set name="topic">happtwiththeresult</set>
+            </think>
+        The breed I recommend you is Saarlos Wolfdog.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Saarloos-wolfdog.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>short *</pattern>
+        <template><srai>short</srai></template>
+    </category>
+        <category>
+        <pattern>* short *</pattern>
+        <template><srai>short</srai></template>
+    </category>
+    <category>
+        <pattern>* short</pattern>
+        <template><srai>short</srai></template>
+    </category>
+</topic>
+<topic name="largeindependentkid">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+                <set name="topic">largeindependentkidguard</set>
+            </think>
+            Should the dog have long fur or short fur?
+        </template>
+    </category>
+    <category>
+        <pattern>I want a dog with good watchdog ability</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+                <set name="topic">largeindependentkidguardno</set>
+            </think>
+            Do you want a dog that is moderately easy to train or difficult to train?
+        </template>
+    </category>
+    <category>
+        <pattern>I do not want a dog with good watchdog ability</pattern>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>no *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+</topic>
+<topic name="largeindependentkidguardno">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>moderately</pattern>
+        <template>
+            <think>
+                <set name="topic">largeindependentkidguadnoplay</set>
+            </think>
+            Would you like a very playfull dog?
+        </template>
+    </category>
+    <category>
+        <pattern>* moderately</pattern>
+        <template><srai>moderately</srai></template>
+    </category>
+    <category>
+        <pattern>moderately *</pattern>
+        <template><srai>moderately</srai></template>
+    </category>
+    <category>
+        <pattern>* moderately *</pattern>
+        <template><srai>moderately</srai></template>
+    </category>
+    <category>
+        <pattern>difficult</pattern>
+        <template>
+            <think>
+                <set name="topic">largeindependentkidguadnoplaydif</set>
+            </think>
+            Would you like an aloof dog or affectionate dog?
+        </template>
+    </category>
+    <category>
+        <pattern>* difficult</pattern>
+        <template><srai>difficult</srai></template>
+    </category>
+    <category>
+        <pattern>difficult *</pattern>
+        <template><srai>difficult</srai></template>
+    </category>
+    <category>
+        <pattern>* difficult *</pattern>
+        <template><srai>difficult</srai></template>
+    </category>
+</topic>
+<topic name="largeindependentkidguadnoplaydif">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>aloof</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Afghan Hound.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/afghan-hound.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>aloof *</pattern>
+        <template><srai>aloof</srai></template>
+    </category>
+    <category>
+        <pattern>* aloof *</pattern>
+        <template><srai>aloof</srai></template>
+    </category>
+    <category>
+        <pattern>* aloof</pattern>
+        <template><srai>aloof</srai></template>
+    </category>
+    <category>
+        <pattern>affectionate</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Bloodhound.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Bloodhound.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>affectionate *</pattern>
+        <template><srai>affectionate</srai></template>
+    </category>
+    <category>
+        <pattern>* affectionate *</pattern>
+        <template><srai>affectionate</srai></template>
+    </category>
+    <category>
+        <pattern>* affectionate</pattern>
+        <template><srai>affectionate</srai></template>
+    </category>
+</topic>
+<topic name="largeindependentkidguadnoplay">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>yes</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Irish Setter.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Irish-Setter.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>I would like *</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>yes *</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>no</pattern>
+        <template>
+            <think>
+                <set name="topic">largeindependentswimm</set>
+            </think>
+            Do you want a hound?
+        </template>
+    </category>
+    <category>
+        <pattern>I would not like *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>no *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+</topic>
+<topic name="largeindependentswimm">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>no</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Curly Coated Retriever.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Curly-Coated-Retriever.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>I want *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>yes</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Ibizan Hound.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Ibizan-Hound.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>I do not want *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>no *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+</topic>
+<topic name="largeindependentkidguard">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>long</pattern>
+        <template>
+            <think>
+                <set name="topic">largeindependentkidguardlong</set>
+            </think>
+            What breed group do you choose?Herding or working?
+        </template>
+    </category>
+    <category>
+        <pattern>long *</pattern>
+        <template><srai>long</srai></template>
+    </category>
+    <category>
+        <pattern>* long *</pattern>
+        <template><srai>long</srai></template>
+    </category>
+    <category>
+        <pattern>* long</pattern>
+        <template><srai>long</srai></template>
+    </category>
+    <category>
+        <pattern>short</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Bull Arab.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Bull-Arab.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>short *</pattern>
+        <template><srai>short</srai></template>
+    </category>
+    <category>
+        <pattern>* short *</pattern>
+        <template><srai>short</srai></template>
+    </category>
+    <category>
+        <pattern>* short</pattern>
+        <template><srai>short</srai></template>
+    </category>
+</topic>
+<topic name="largeindependentkidguardlong">
+    <category>
+        <pattern>*</pattern>
+        <template><srai>I have no answer for this</srai></template>
+    </category>
+    <category>
+        <pattern>herding</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Polish Tatra.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Polish-Tatra-Sheepdog.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>herding *</pattern>
+        <template><srai>herding</srai></template>
+    </category>
+    <category>
+        <pattern>* herding *</pattern>
+        <template><srai>herding</srai></template>
+    </category>
+    <category>
+        <pattern>* herding</pattern>
+        <template><srai>herding</srai></template>
+    </category>
+    <category>
+        <pattern>working</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Anatolian Shepherd Dog.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Anatolian-Shepherd-Dog.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>working *</pattern>
+        <template><srai>working</srai></template>
+    </category>
+    <category>
+        <pattern>* working *</pattern>
+        <template><srai>working</srai></template>
+    </category>
+    <category>
+        <pattern>* working</pattern>
+        <template><srai>working</srai></template>
+    </category>
+</topic>
+<topic name="largeloyal">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this.Please try again.</template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+                <set name="topic">largeloyalfriendlynoppp</set>
+            </think>
+            Should your dog be easy to train?Hard to train?Moderately easy to train?
+        </template>
+    </category>
+    <category>
+        <pattern>I want *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+                <set name="topic">largeloyalfriendlynot</set>
+            </think>
+            Should your dog have long fur or short fur?
+        </template>
+    </category>
+    <category>
+        <pattern>I do not want *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>no *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+</topic>
+<topic name="largeloyalfriendlynot">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>long</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Irish Red and White Setter.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Irish-Red-and-White-Setter.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>long *</pattern>
+        <template><srai>long</srai></template>
+    </category>
+    <category>
+        <pattern>* long *</pattern>
+        <template><srai>long</srai></template>
+    </category>
+    <category>
+        <pattern>* long</pattern>
+        <template><srai>long</srai></template>
+    </category>
+    <category>
+        <pattern>short</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Dogue De Bordeaux.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Dogue-de-Bordeaux.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>short *</pattern>
+        <template><srai>short</srai></template>
+    </category>
+    <category>
+        <pattern>* short *</pattern>
+        <template><srai>short</srai></template>
+    </category>
+    <category>
+        <pattern>* short</pattern>
+        <template><srai>short</srai></template>
+    </category>
+</topic>
+<topic name="largeloyalfriendlynoppp">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>easy</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Beauceron.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Beauceron.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>easy *</pattern>
+        <template><srai>easy</srai></template>
+    </category>
+    <category>
+        <pattern>* easy *</pattern>
+        <template><srai>easy</srai></template>
+    </category>
+    <category>
+        <pattern>* easy</pattern>
+        <template><srai>easy</srai></template>
+    </category>
+    <category>
+        <pattern>hard</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is BullMastiff.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Bullmastiff.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>hard *</pattern>
+        <template><srai>hard</srai></template>
+    </category>
+    <category>
+        <pattern>* hard *</pattern>
+        <template><srai>hard</srai></template>
+    </category>
+    <category>
+        <pattern>* hard</pattern>
+        <template><srai>hard</srai></template>
+    </category>
+    <category>
+        <pattern>difficult *</pattern>
+        <template><srai>hard</srai></template>
+    </category>
+    <category>
+        <pattern>* difficult *</pattern>
+        <template><srai>hard</srai></template>
+    </category>
+    <category>
+        <pattern>* difficult</pattern>
+        <template><srai>hard</srai></template>
+    </category>
+    <category>
+        <pattern>difficult</pattern>
+        <template><srai>hard</srai></template>
+    </category>
+   <category>
+        <pattern>moderately</pattern>
+        <template>
+            <think>
+                <set name="topic">largeloyalmoderately</set>
+            </think>
+            Would you like a dog with short fur or long fur?
+        </template>
+    </category>
+    <category>
+        <pattern>moderately *</pattern>
+        <template><srai>moderately</srai></template>
+    </category>
+    <category>
+        <pattern>* moderately *</pattern>
+        <template><srai>moderately</srai></template>
+    </category>
+    <category>
+        <pattern>* moderately</pattern>
+        <template><srai>moderately</srai></template>
+    </category>
+</topic>
+<topic name="largeloyalmoderately">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>short</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Rhodesian Ridgeback.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Rhodesian-Ridgeback.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>short *</pattern>
+        <template><srai>short</srai></template>
+    </category>
+    <category>
+        <pattern>* short *</pattern>
+        <template><srai>short</srai></template>
+    </category>
+    <category>
+        <pattern>* short</pattern>
+        <template><srai>short</srai></template>
+    </category>
+    <category>
+        <pattern>long</pattern>
+        <template>
+            <think>
+                <set name="topic">largeloyalfriendlymlong</set>
+            </think>
+            Should your dog have a daily strict exercise routine or a less strict exercise routine?
+        </template>
+    </category>
+    <category>
+        <pattern>long *</pattern>
+        <template><srai>long</srai></template>
+    </category>
+    <category>
+        <pattern>* long *</pattern>
+        <template><srai>long</srai></template>
+    </category>
+    <category>
+        <pattern>* long</pattern>
+        <template><srai>long</srai></template>
+    </category>
+</topic>
+<topic name="largeloyalfriendlymlong">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>daily strict</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Gordon Setter.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Gordon-Setter.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* daily strict *</pattern>
+        <template><srai>daily strict</srai></template>
+    </category>
+    <category>
+        <pattern>daily</pattern>
+        <template><srai>daily strict</srai></template>
+    </category>
+    <category>
+        <pattern>daily strict *</pattern>
+        <template><srai>daily strict</srai></template>
+    </category>
+    <category>
+        <pattern>* daily strict</pattern>
+        <template><srai>daily strict</srai></template>
+    </category>
+    <category>
+        <pattern>strict routine</pattern>
+        <template><srai>daily strict</srai></template>
+    </category>
+    <category>
+        <pattern>strict</pattern>
+        <template><srai>daily strict</srai></template>
+    </category>
+    <category>
+        <pattern>strict exercise</pattern>
+        <template><srai>daily strict</srai></template>
+    </category>
+    <category>
+        <pattern>strict exercise routine</pattern>
+        <template><srai>daily strict</srai></template>
+    </category>
+    <category>
+        <pattern>less</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you Tibetan Mastiff.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Tibetan-Mastiff.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* less *</pattern>
+        <template><srai>less</srai></template>
+    </category>
+    <category>
+        <pattern>less *</pattern>
+        <template><srai>less</srai></template>
+    </category>
+    <category>
+        <pattern>* less</pattern>
+        <template><srai>less</srai></template>
+    </category>
+</topic>
+<topic name="largeaggressive">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this.</template>
+    </category>
+    <category>
+        <pattern>Show me *</pattern>
+        <template>
+            The breeds I recommend you are:
+            <br/>
+            <ul>
+                <li>Tosa</li>
+                <li>West Siberian Laike</li>
+            </ul>
+            Would you like to continue with the questions?
+            <think>
+                <set name="topic">largeaggressiveintrb</set>
+            </think>
+        </template>
+    </category>
+    <category>
+        <pattern>hound</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is West Siberian Laika.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/West-Siberian-Laika.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* hound</pattern>
+        <template><srai>hound</srai></template>
+    </category>
+    <category>
+        <pattern>* hound *</pattern>
+        <template><srai>hound</srai></template>
+    </category>
+    <category>
+        <pattern>hound *</pattern>
+        <template><srai>hound</srai></template>
+    </category>
+    <category>
+        <pattern>guardian</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Tosa.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Tosa-dog.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* guardian</pattern>
+        <template><srai>guardian</srai></template>
+    </category>
+    <category>
+        <pattern>* guardian *</pattern>
+        <template><srai>guardian</srai></template>
+    </category>
+    <category>
+        <pattern>guardian *</pattern>
+        <template><srai>guardian</srai></template>
+    </category>
+</topic>
+<topic name="largeaggressiveintrb">
+
+        <category>
+        <pattern>Show me *</pattern>
+        <template>
+            The breeds I recommend you are:
+            <br/>
+            <ul>
+                <li>Tosa</li>
+                <li>West Siberian Laike</li>
+            </ul>
+            Would you like to continue with the questions?
+            <think>
+                <set name="topic">largeaggressiveintrb</set>
+            </think>
+        </template>
+        </category>
+
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think><set name="topic">largeaggressivex</set></think>
+            Do you care about the breed group?
+        </template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think><set name="topic">happywiththeresult</set></think>
+        </template>
+    </category>
+</topic>
+<topic name="little">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>terrier</pattern>
+        <template>
+            <think>
+                <set name="topic">littleterrier</set>
+            </think>
+            Do you want a breed that is friendly to other dogs?
+        </template>
+    </category>
+    <category>
+        <pattern>* terrier</pattern>
+        <template><srai>terrier</srai></template>
+    </category>
+    <category>
+        <pattern>* terrier *</pattern>
+        <template><srai>terrier</srai></template>
+    </category>
+    <category>
+        <pattern>terrier *</pattern>
+        <template><srai>terrier</srai></template>
+    </category>
+    <category>
+        <pattern>hound</pattern>
+        <template>
+            <think>
+                <set name="topic">littlehound</set>
+            </think>
+            Should your dog be good for children?
+        </template>
+    </category>
+    <category>
+        <pattern>* hound</pattern>
+        <template><srai>hound</srai></template>
+    </category>
+    <category>
+        <pattern>* hound *</pattern>
+        <template><srai>hound</srai></template>
+    </category>
+    <category>
+        <pattern>hound *</pattern>
+        <template><srai>hound</srai></template>
+    </category>
+    <category>
+        <pattern>companion</pattern>
+        <template>
+            <think>
+                <set name="topic">littlecompanion</set>
+            </think>
+            Would you like a toy breed?
+        </template>
+    </category>
+    <category>
+        <pattern>* companion</pattern>
+        <template><srai>companion</srai></template>
+    </category>
+    <category>
+        <pattern>* companion *</pattern>
+        <template><srai>companion</srai></template>
+    </category>
+    <category>
+        <pattern>companion *</pattern>
+        <template><srai>companion</srai></template>
+    </category>
+</topic>
+<topic name="littleterrier">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+                <set name="topic">littleterrierdog</set>
+            </think>
+            Should your dog be hypoallergenic?
+        </template>
+    </category>
+    <category>
+        <pattern>I want a breed that is friendly to other dogs</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+                <set name="topic">littleterrierdognot</set>
+            </think>
+            What temperament you like the most?Obedient or independent?
+        </template>
+    </category>
+    <category>
+        <pattern>I do not want a breed that is friendly to other dogs</pattern>
+        <template><srai>not</srai></template>
+    </category>
+    <category>
+        <pattern>no *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>* not *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+</topic>
+<topic name="littleterrierdognot">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>Obedient</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Border Terrier.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Border-Terrier.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>obedient *</pattern>
+        <template><srai>obedient</srai></template>
+    </category>
+    <category>
+        <pattern>* obedient *</pattern>
+        <template><srai>obedient</srai></template>
+    </category>
+    <category>
+        <pattern>* obedient</pattern>
+        <template><srai>obedient</srai></template>
+    </category>
+    <category>
+        <pattern>Independent</pattern>
+        <template>
+            <think>
+                <set name="topic">littleterrierdognotindepen</set>
+            </think>
+            Should your dog require moderate maintenance or high maintenance?
+        </template>
+    </category>
+    <category>
+        <pattern>independent *</pattern>
+        <template><srai>independent</srai></template>
+    </category>
+    <category>
+        <pattern>* independent *</pattern>
+        <template><srai>independent</srai></template>
+    </category>
+    <category>
+        <pattern>* independent</pattern>
+        <template><srai>independent</srai></template>
+    </category>
+</topic>
+<topic name="littleterrierdognotindepen">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>moderate</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Scottish Terrier.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Scottish-Terrier.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>moderate *</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+    <category>
+        <pattern>* moderate *</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+    <category>
+        <pattern>* moderate</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+    <category>
+        <pattern>high</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Welsh Terrier.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Welsh-Terrier.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>high *</pattern>
+        <template><srai>high</srai></template>
+    </category>
+    <category>
+        <pattern>* high *</pattern>
+        <template><srai>high</srai></template>
+    </category>
+    <category>
+        <pattern>* high</pattern>
+        <template><srai>high</srai></template>
+    </category>
+</topic>
+<topic name="littleterrierdog">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+                <set name="topic">littleterrierdoghypoallergenicno</set>
+            </think>
+            Do you want a dog that is difficult to train or moderately easy to train?If you want another question ask.
+        </template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+                <set name="topic">littleterrierdogkid</set>
+            </think>
+            Do you want a dog for kid?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should be not hypoallergenic</pattern>
+        <template><srai>no</srai></template>
+    </category>
+</topic>
+<topic name="littleterrierdoghypoallergenicno">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>difficult</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Sealyham Terrier
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Sealyham-Terrier.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>difficult *</pattern>
+        <template><srai>difficult</srai></template>
+    </category>
+    <category>
+        <pattern>* difficult *</pattern>
+        <template><srai>difficult</srai></template>
+    </category>
+    <category>
+        <pattern>* difficult</pattern>
+        <template><srai>difficult</srai></template>
+    </category>
+    <category>
+        <pattern>hard</pattern>
+        <template><srai>difficult</srai></template>
+    </category>
+    <category>
+        <pattern>* hard *</pattern>
+        <template><srai>difficult</srai></template>
+    </category>
+    <category>
+        <pattern>* hard</pattern>
+        <template><srai>difficult</srai></template>
+    </category>
+    <category>
+        <pattern>hard</pattern>
+        <template><srai>difficult</srai></template>
+    </category>
+    <category>
+        <pattern>moderately</pattern>
+        <template>
+            <think>
+                <set name="topic">littleterriermorethanlessthan</set>
+            </think>
+            How much do you want to pay for a dog?More than 2000 USD?Less than 2000 USD?
+        </template>
+    </category>
+    <category>
+        <pattern>moderately *</pattern>
+        <template><srai>moderately</srai></template>
+    </category>
+    <category>
+        <pattern>* moderately *</pattern>
+        <template><srai>moderately</srai></template>
+    </category>
+    <category>
+        <pattern>* moderately</pattern>
+        <template><srai>moderately</srai></template>
+    </category>
+    <category>
+        <pattern>please *</pattern>
+        <template>
+            <think>
+                <set name="topic">altaintrebare</set>
+            </think>
+            How should be your dog?Intelligent?Independent?
+        </template>
+    </category>
+</topic>
+<topic name="littleterriermorethanlessthan">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>more</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Norfolk Terrier
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Norfolk-Terrier.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>more *</pattern>
+        <template><srai>more</srai></template>
+    </category>
+    <category>
+        <pattern>* more *</pattern>
+        <template><srai>more</srai></template>
+    </category>
+    <category>
+        <pattern>* more</pattern>
+        <template><srai>more</srai></template>
+    </category>
+    <category>
+        <pattern>less</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Norwich Terrier
+        <br/>Here is a link with the
+        <a href = ""> breed.</a>https://www.dogbreedslist.info/all-dog-breeds/Norwich-Terrier.html
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>less *</pattern>
+        <template><srai>less</srai></template>
+    </category>
+    <category>
+        <pattern>* less *</pattern>
+        <template><srai>less</srai></template>
+    </category>
+    <category>
+        <pattern>* less</pattern>
+        <template><srai>less</srai></template>
+    </category>
+</topic>
+<topic name="altaintrebare">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>Intelligent</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Smooth Fox Terrier
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Smooth-Fox-Terrier.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>Intelligent *</pattern>
+        <template><srai>intelligent</srai></template>
+    </category>
+    <category>
+        <pattern>* Intelligent *</pattern>
+        <template><srai>intelligent</srai></template>
+    </category>
+    <category>
+        <pattern>* Intelligent</pattern>
+        <template><srai>intelligent</srai></template>
+    </category>
+    <category>
+        <pattern>Independent</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Jack Russell Terrier
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Jack-Russell-Terrier.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>Independent *</pattern>
+        <template><srai>Independent</srai></template>
+    </category>
+    <category>
+        <pattern>* Independent *</pattern>
+        <template><srai>Independent</srai></template>
+    </category>
+    <category>
+        <pattern>* Independent</pattern>
+        <template><srai>Independent</srai></template>
+    </category>
+</topic>
+<topic name="littleterrierdogkid">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Rat Terrier
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Rat-Terrier.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>I want a dog for kid</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Manchenster Terrier
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Manchester-Terrier.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>I do not want a dog for kid</pattern>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>no *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+</topic>
+<topic name="littlecompanion">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+                <set name="topic">littlecompanionkidtoy</set>
+            </think>
+            Should your dog be good with kids?
+        </template>
+    </category>
+    <category>
+        <pattern>I would like a toy breed</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+                <set name="topic">littlecompanionkidtoynot</set>
+            </think>
+            Should your dog have fluffy fur?
+        </template>
+    </category>
+    <category>
+        <pattern>I would not like a toy breed</pattern>
+        <template><srai>No</srai></template>
+    </category>
+    <category>
+        <pattern>No *</pattern>
+        <template><srai>No</srai></template>
+    </category>
+</topic>
+<topic name="littlecompanionkidtoynot">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+                <set name="topic">fluffynottoy</set>
+            </think>
+            How much do you want to pay for a dog?More than 1000 USD?Less than 1000 USD?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should have fluffy fur</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+                <set name="topic">fluffynotkid</set>
+            </think>
+            Should your dog be good for kids?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should not have fluffy fur</pattern>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>no *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+</topic>
+<topic name="fluffynotkid">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+                <set name="topic">happywiththeresult</set>
+            </think>
+                The breed I recommend you is Schipperke.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Schipperke.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should be good for kids</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+                <set name="topic">fluffynotkidno</set>
+            </think>
+            Do you want a breed that is easygoing or independent?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should not be good for kids</pattern>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>no *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+</topic>
+<topic name="fluffynotkidno">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>easygoing</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is French Bulldog.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/French-Bulldog.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* easygoing</pattern>
+        <template><srai>easygoing</srai></template>
+    </category>
+    <category>
+        <pattern>* easygoing *</pattern>
+        <template><srai>easygoing</srai></template>
+    </category>
+    <category>
+        <pattern>easygoing *</pattern>
+        <template><srai>easygoing</srai></template>
+    </category>
+    <category>
+        <pattern>* easy</pattern>
+        <template><srai>easygoing</srai></template>
+    </category>
+    <category>
+        <pattern>* easy *</pattern>
+        <template><srai>easygoing</srai></template>
+    </category>
+    <category>
+        <pattern>easy *</pattern>
+        <template><srai>easygoing</srai></template>
+    </category>
+    <category>
+        <pattern>independent</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Miniature Shar Pei.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Miniature-Shar-Pei.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* independent</pattern>
+        <template><srai>independent</srai></template>
+    </category>
+    <category>
+        <pattern>* independent *</pattern>
+        <template><srai>independent</srai></template>
+    </category>
+    <category>
+        <pattern>independent *</pattern>
+        <template><srai>independent</srai></template>
+    </category>
+</topic>
+<topic name="fluffynottoy">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>More</pattern>
+        <template>
+            <think>
+                <set name="topic">fluffllynottoymore</set>
+            </think>
+            What temperament should your dog have?Affectionate?Loyal?
+        </template>
+    </category>
+    <category>
+        <pattern>* More *</pattern>
+        <template>
+            <srai>More</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>More *</pattern>
+        <template>
+            <srai>More</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* More</pattern>
+        <template>
+            <srai>More</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>Less</pattern>
+        <template>
+            <think>
+                <set name="topic">fluffllynottoyless</set>
+            </think>
+            Do you want a hypoallergenic breed?
+        </template>
+    </category>
+    <category>
+        <pattern>* less *</pattern>
+        <template>
+            <srai>less</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>less *</pattern>
+        <template>
+            <srai>less</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* less</pattern>
+        <template>
+            <srai>less</srai>
+        </template>
+    </category>
+</topic>
+<topic name="fluffllynottoyless">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+            <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Lhasa Apso.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Lhasa-Apso.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>I want a hypoallergenic breed</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+            <template>
+            <think><set name="topic">fluffynothypo</set></think>
+            Should your dog be sensitive?
+        </template>
+    </category>
+    <category>
+        <pattern>I do not want a hypoallergenic breed</pattern>
+        <template><srai>No</srai></template>
+    </category>
+    <category>
+        <pattern>No *</pattern>
+        <template><srai>No</srai></template>
+    </category>
+</topic>
+<topic name="fluffynothypo">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+            <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Bichon Frise.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Bichon-Frise.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should be sensitive</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think><set name="topic">doicaini</set></think>
+            Do you want a dog that require high grooming maintenance or moderate?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should not be sensitive</pattern>
+        <template><srai>No</srai></template>
+    </category>
+    <category>
+        <pattern>No *</pattern>
+        <template><srai>No</srai></template>
+    </category>
+</topic>
+<topic name="doicaini">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>high</pattern>
+                    <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Lowchen.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Lowchen.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>moderate</pattern>
+                    <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Tibetan Spaniel.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Tibetan-Spaniel.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>moderate *</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+    <category>
+        <pattern>* moderate *</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+    <category>
+        <pattern>* moderate</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+    <category>
+        <pattern>high *</pattern>
+        <template><srai>high</srai></template>
+    </category>
+    <category>
+        <pattern>* high *</pattern>
+        <template><srai>high</srai></template>
+    </category>
+    <category>
+        <pattern>* high</pattern>
+        <template><srai>high</srai></template>
+    </category>
+</topic>
+<topic name="fluffllynottoymore">
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for this</template>
+    </category>
+    <category>
+        <pattern>Loyal</pattern>
+            <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Bolognese.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Bolognese-dog.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>loyal *</pattern>
+        <category><srai>loyal</srai></category>
+    </category>
+        <category>
+        <pattern>* loyal *</pattern>
+        <category><srai>loyal</srai></category>
+    </category>
+        <category>
+        <pattern>* loyal</pattern>
+        <category><srai>loyal</srai></category>
+    </category>
+    <category>
+        <pattern>affectionate</pattern>
+            <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Coton De Tulear.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Coton-De-Tulear.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>affectionate *</pattern>
+        <category><srai>affectionate</srai></category>
+    </category>
+        <category>
+        <pattern>* affectionate *</pattern>
+        <category><srai>affectionate</srai></category>
+    </category>
+        <category>
+        <pattern>* affectionate</pattern>
+        <category><srai>affectionate</srai></category>
+    </category>
+</topic>
+
+<topic name="littlecompanionkidtoy">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think><set name="topic">littlecompaniontoy</set></think>
+            Do you want a hypoallergenic breed?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should be good with kids</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think><set name="topic">littlecompaniontoykidnot</set></think>
+            Do you want a breed that requires a high maintenance?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should not be good with kids</pattern>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>no *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+</topic>
+<topic name="littlecompaniontoykidnot">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>yes</pattern>
+        <template>
+            <think>
+                <set name="topic">littlecompanionagressivfriend</set>
+            </think>
+            Should your dog be aggressive or friendly?
+        </template>
+    </category>
+    <category>
+        <pattern>I want breed that requires a high performance</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>yes *</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>no</pattern>
+        <template>
+            <think>
+                <set name="topic">littlecompanionno</set>
+            </think>
+            How much do you want to pay for a dog?More than 500 USD?Less than 500 USD?
+        </template>
+    </category>
+    <category>
+        <pattern>I do not want breed that requires a high performance</pattern>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>no *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+</topic>
+<topic name="littlecompanionno">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>less</pattern>
+            <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Japanese Chin.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Japanese-Chin.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+       <pattern>less *</pattern>
+       <template>
+           <srai>less</srai>
+       </template>
+    </category>
+    <category>
+       <pattern>* less *</pattern>
+       <template>
+           <srai>less</srai>
+       </template>
+    </category>
+    <category>
+       <pattern>* less</pattern>
+       <template>
+           <srai>less</srai>
+       </template>
+    </category>
+    <category>
+        <pattern>more</pattern>
+        <template>
+            <think>
+                <set name="topic">littlecompanionmore</set>
+            </think>
+            Do you want a friendly breed or courageous breed?
+        </template>
+    </category>
+    <category>
+       <pattern>more *</pattern>
+       <template>
+           <srai>more</srai>
+       </template>
+    </category>
+    <category>
+       <pattern>* more *</pattern>
+       <template>
+           <srai>more</srai>
+       </template>
+    </category>
+    <category>
+       <pattern>* more</pattern>
+       <template>
+           <srai>more</srai>
+       </template>
+    </category>
+</topic>
+<topic name="littlecompanionmore">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>friendly</pattern>
+            <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Pomeranian.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Pomeranian.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* friendly</pattern>
+        <template><srai>friendly</srai></template>
+    </category>
+    <category>
+        <pattern>* friendly *</pattern>
+        <template><srai>friendly</srai></template>
+    </category>
+    <category>
+        <pattern>friendly *</pattern>
+        <template><srai>friendly</srai></template>
+    </category>
+    <category>
+        <pattern>courageous</pattern>
+            <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Chihuahua.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Chihuahua.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* courageous</pattern>
+        <template><srai>courageous</srai></template>
+    </category>
+    <category>
+        <pattern>* courageous *</pattern>
+        <template><srai>courageous</srai></template>
+    </category>
+    <category>
+        <pattern>courageous *</pattern>
+        <template><srai>courageous</srai></template>
+    </category>
+</topic>
+<topic name="littlecompanionagressivfriend">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>aggressive</pattern>
+            <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Pekingese.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Pekingese.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* aggressive</pattern>
+        <template><srai>agressive</srai></template>
+    </category>
+    <category>
+        <pattern>* aggressive *</pattern>
+        <template><srai>agressive</srai></template>
+    </category>
+    <category>
+        <pattern>agressive *</pattern>
+        <template><srai>agressive</srai></template>
+    </category>
+    <category>
+        <pattern>friendly</pattern>
+            <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Shih Tzu.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Shih-Tzu.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* friendly</pattern>
+        <template><srai>friendly</srai></template>
+    </category>
+    <category>
+        <pattern>* friendly *</pattern>
+        <template><srai>friendly</srai></template>
+    </category>
+    <category>
+        <pattern>friendly *</pattern>
+        <template><srai>friendly</srai></template>
+    </category>
+</topic>
+<topic name="littlecompaniontoy">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+                <set name="topic">littlecompaniontoyall</set>
+            </think>
+            Should your dog be difficult to train or easy to train?
+        </template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>I want a hypoallergenic breed</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+                <set name="topic">littlecompaniontoynotall</set>
+            </think>
+            Do you want a breed that requires a low maintenance or moderate maintenance?
+        </template>
+    </category>
+    <category>
+        <pattern>No *</pattern>
+        <template><srai>No</srai></template>
+    </category>
+    <category>
+        <pattern>I do not want a hypoallergenic breed</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+</topic>
+<topic name="littlecompaniontoynotall">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>low</pattern>
+            <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Pug.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Pug.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>Low *</pattern>
+        <template><srai>low</srai></template>
+    </category>
+    <category>
+        <pattern>* low *</pattern>
+        <template><srai>low</srai></template>
+    </category>
+    <category>
+        <pattern>* low</pattern>
+        <template><srai>low</srai></template>
+    </category>
+    <category>
+        <pattern>moderate</pattern>
+        <template>
+            <think>
+                <set name="topic">littlecompanionmoderate</set>
+            </think>
+            Should your dog be friendly to other dogs?
+        </template>
+    </category>
+    <category>
+        <pattern>moderate *</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+    <category>
+        <pattern>* moderate *</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+    <category>
+        <pattern>* moderate</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+</topic>
+<topic name="littlecompanionmoderate">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+            <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Cavalier King Charles Spaniel.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Cavalier-King-Charles-Spaniel.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should be friendly to other dogs</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>yes *</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+            <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Papillon.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Papillon-dog.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should not be friendly to other dogs</pattern>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>no *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+</topic>
+<topic name="littlecompaniontoyall">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>difficult</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Maltese.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Maltese-Dog.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>difficult *</pattern>
+        <template><srai>difficult</srai></template>
+    </category>
+    <category>
+        <pattern>* difficult *</pattern>
+        <template><srai>difficult</srai></template>
+    </category>
+    <category>
+        <pattern>* difficult</pattern>
+        <template><srai>difficult</srai></template>
+    </category>
+    <category>
+        <pattern>easy</pattern>
+        <template>
+            <think>
+                <set name="topic">littlecompaniontoyalleasy</set>
+            </think>
+            Should your dog be friendly to other dogs?
+        </template>
+    </category>
+    <category>
+        <pattern>easy *</pattern>
+        <template><srai>easy</srai></template>
+    </category>
+    <category>
+        <pattern>* easy *</pattern>
+        <template><srai>easy</srai></template>
+    </category>
+    <category>
+        <pattern>* easy</pattern>
+        <template><srai>easy</srai></template>
+    </category>
+</topic>
+<topic name="littlecompaniontoyalleasy">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Havanese.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Havanese.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should be friendly to other dogs</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Chinese Crested.
+        <br/>Here is a link with the
+        <a href = "https://www.dogbreedslist.info/all-dog-breeds/Chinese-Crested.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should not be friendly to other dogs</pattern>
+        <template><srai>No</srai></template>
+    </category>
+    <category>
+        <pattern>No *</pattern>
+        <template><srai>No</srai></template>
+    </category>
+</topic>
+<topic name="littlehound">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+                <set name="topic">littehoundkidyes</set>
+            </think>
+            Would you like a playfull dog?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should be good for children</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Dachshund.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Dachshund.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should not be good for children</pattern>
+        <template><srai>No</srai></template>
+    </category>
+    <category>
+        <pattern>No *</pattern>
+        <template><srai>No</srai></template>
+    </category>
+
+</topic>
+<topic name="littehoundkidyes">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Beagle.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Beagle.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>I would like a playfull dog</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Basset Bleu de Gascogne.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Basset-Bleu-de-Gascogne.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>I would not like a playfull dog</pattern>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>no *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+</topic>
+<topic name="medium">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>Hound</pattern>
+        <template>
+            <think>
+                <set name="topic">mediumhound</set>
+            </think>
+            Do you want a breed that has strong watchdog ability or low watchdog ability?
+        </template>
+    </category>
+    <category>
+    <pattern>Terrier</pattern>
+    <template>
+        <think>
+            <set name="topic">mediumterrier</set>
+        </think>
+        Do you want a dog that requires a high grooming maintenance?
+    </template>
+    </category>
+    <category>
+    <pattern>Northern</pattern>
+    <template>
+        <think>
+            <set name="topic">mediumnorthern</set>
+        </think>
+        Do you want a playfull breed?
+    </template>
+    </category>
+    <category>
+        <pattern>* northern</pattern>
+        <template><srai>northern</srai></template>
+    </category>
+        <category>
+        <pattern>* northern *</pattern>
+        <template><srai>northern</srai></template>
+    </category>
+        <category>
+        <pattern>northern *</pattern>
+        <template><srai>northern</srai></template>
+    </category>
+    <category>
+        <pattern>* hound</pattern>
+        <template><srai>hound</srai></template>
+    </category>
+        <category>
+        <pattern>* hound *</pattern>
+        <template><srai>hound</srai></template>
+    </category>
+        <category>
+        <pattern>hound *</pattern>
+        <template><srai>hound</srai></template>
+    </category>
+    <category>
+        <pattern>* terrier</pattern>
+        <template><srai>terrier</srai></template>
+    </category>
+        <category>
+        <pattern>* terrier *</pattern>
+        <template><srai>terrier</srai></template>
+    </category>
+        <category>
+        <pattern>terrier *</pattern>
+        <template><srai>terrier</srai></template>
+    </category>
+</topic>
+<topic name="mediumnorthern">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+                <set name="topic">mediumnorthernplay</set>
+            </think>
+            How much do you want to pay for a dog?Less than 700 USD?More than 700 USD?
+        </template>
+    </category>
+    <category>
+        <pattern>I want a playfull breed</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>* Yes</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+                <set name="topic">mediumnorthernplaynot</set>
+            </think>
+            What trait should your dog have?Choose between:independent, agile, docile.
+        </template>
+    </category>
+    <category>
+        <pattern>I do not want a playfull breed</pattern>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>no *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>* no</pattern>
+        <template><srai>no</srai></template>
+    </category>
+</topic>
+<topic name="mediumnorthernplaynot">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>independent</pattern>
+        <template>
+            <think>
+                <set name="topic">mediumnorthernplaynoti</set>
+                </think>
+                Do you want a breed that needs a lot of exercises?
+        </template>
+    </category>
+    <category>
+        <pattern>* independent</pattern>
+        <template><srai>independent</srai></template>
+    </category>
+    <category>
+        <pattern>* independent *</pattern>
+        <template><srai>independent</srai></template>
+    </category>
+    <category>
+        <pattern>independent *</pattern>
+        <template><srai>independent</srai></template>
+    </category>
+    <category>
+        <pattern>agile</pattern>
+        <template>
+            <think>
+                <set name="topic">mediumnorthernplaynota</set>
+                </think>
+               Should your pet have a strong or moderate watchdog ability?
+        </template>
+    </category>
+    <category>
+        <pattern>* agile</pattern>
+        <template><srai>agile</srai></template>
+    </category>
+    <category>
+        <pattern>* agile *</pattern>
+        <template><srai>agile</srai></template>
+    </category>
+    <category>
+        <pattern>agile *</pattern>
+        <template><srai>agile</srai></template>
+    </category>
+    <category>
+        <pattern>docile</pattern>
+        <template>
+            <think>
+                <set name="topic">mediumnorthernplaydocile</set>
+                </think>
+               Shoudl your dog need a lot of exercises?
+        </template>
+    </category>
+    <category>
+        <pattern>* docile</pattern>
+        <template><srai>docile</srai></template>
+    </category>
+    <category>
+        <pattern>* docile *</pattern>
+        <template><srai>docile</srai></template>
+    </category>
+    <category>
+        <pattern>docile *</pattern>
+        <template><srai>docile</srai></template>
+    </category>
+</topic>
+<topic name="mediumnorthernplaydocile">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>no</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Hokkaido Dog.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Hokkaido-Dog.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should need a lot *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>yes</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Kishu Ken.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Kishu.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should not *</pattern>
+        <template><srai>No</srai></template>
+    </category>
+    <category>
+        <pattern>no *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+</topic>
+<topic name="mediumnorthernplaynota">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>strong</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Alaskan Klee Kai.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Alaskan-Klee-Kai.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>strong *</pattern>
+        <template><srai>strong</srai></template>
+    </category>
+    <category>
+        <pattern>* strong *</pattern>
+        <template><srai>strong</srai></template>
+    </category>
+    <category>
+        <pattern>* strong</pattern>
+        <template><srai>strong</srai></template>
+    </category>
+    <category>
+        <pattern>moderate</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Shikoku.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Shikoku-dog.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>moderate *</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+    <category>
+        <pattern>* moderate *</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+    <category>
+        <pattern>* moderate</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+</topic>
+<topic name="mediumnorthernplaynoti">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Karelian Bear Dog.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Karelian-Bear-Dog.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>I want a breed that need a lot of exercises</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>* Yes </pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Chow Chow.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Chow-Chow.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>I do not want a breed that need a lot of exercises</pattern>
+        <template><srai>No</srai></template>
+    </category>
+    <category>
+        <pattern>No *</pattern>
+        <template><srai>No</srai></template>
+    </category>
+    <category>
+        <pattern>* No </pattern>
+        <template><srai>No</srai></template>
+    </category>
+</topic>
+<topic name="mediumnorthernplay">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>more</pattern>
+        <template>
+            <think>
+                <set name="topic">mediumnorthernplaymore</set>
+            </think>
+            Would you like a breed with strong watchdog ability or low?
+        </template>
+    </category>
+    <category>
+        <pattern>more *</pattern>
+        <template><srai>more</srai></template>
+    </category>
+    <category>
+        <pattern>* more *</pattern>
+        <template><srai>more</srai></template>
+    </category>
+    <category>
+        <pattern>* more</pattern>
+        <template><srai>more</srai></template>
+    </category>
+    <category>
+        <pattern>less</pattern>
+        <template>
+            <think>
+                <set name="topic">mediumnorthernplayless</set>
+            </think>
+           Do you want a breed that is difficult to train or moderately easy to train?
+        </template>
+    </category>
+    <category>
+        <pattern>less *</pattern>
+        <template><srai>less</srai></template>
+    </category>
+    <category>
+        <pattern>* less *</pattern>
+        <template><srai>less</srai></template>
+    </category>
+    <category>
+        <pattern>* less</pattern>
+        <template><srai>less</srai></template>
+    </category>
+</topic>
+<topic name="mediumnorthernplayless">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>difficult</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Korean Jindo Dog.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Korean-Jindo-Dog.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+      <category>
+        <pattern>moderately</pattern>
+        <template>
+            <think>
+            <set name="topic">mediumnorthernplaylessmoderately</set>
+            </think>
+        Should your dog be friendly to other dogs?
+        </template>
+    </category>
+    <category>
+        <pattern>difficult *</pattern>
+        <template><srai>difficult</srai></template>
+    </category>
+    <category>
+        <pattern>* difficult *</pattern>
+        <template><srai>difficult</srai></template>
+    </category>
+    <category>
+        <pattern>* difficult </pattern>
+        <template><srai>difficult</srai></template>
+    </category>
+     <category>
+        <pattern>moderately *</pattern>
+        <template><srai>moderately</srai></template>
+    </category>
+    <category>
+        <pattern>* moderately *</pattern>
+        <template><srai>moderately</srai></template>
+    </category>
+    <category>
+        <pattern>* moderately </pattern>
+        <template><srai>moderately</srai></template>
+    </category>
+    <category>
+        <pattern>hard *</pattern>
+        <template><srai>difficult</srai></template>
+    </category>
+    <category>
+        <pattern>* hard *</pattern>
+        <template><srai>difficult</srai></template>
+    </category>
+    <category>
+        <pattern>* hard </pattern>
+        <template><srai>difficult</srai></template>
+    </category>
+    <category>
+        <pattern>hard</pattern>
+        <template><srai>difficult</srai></template>
+    </category>
+    <category>
+        <pattern>moderately easy</pattern>
+        <template>
+            <think>
+            <set name="topic">mediumnorthernmoderately</set>
+            </think>
+
+        </template>
+    </category>
+</topic>
+<topic name="mediumnorthernplaylessmoderately">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+                <set name="topic">mediumnorthernplaylessm</set>
+            </think>
+            Would you like a breed with strong watchdog ability or moderate?
+        </template>
+    </category>
+    <category>
+        <pattern>No *</pattern>
+        <template><srai>No</srai></template>
+    </category>
+    <category>
+        <pattern>My dog should not be friendly to other dogs</pattern>
+        <template><srai>No</srai></template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Swedish Lapphund.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Swedish-Lapphund.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>My dog should be friendly to other dogs</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+</topic>
+<topic name="mediumnorthernplaylessm">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>strong</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Black Norwegian Elkhound.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Black-Norwegian-Elkhound.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* strong</pattern>
+        <template><srai>strong</srai></template>
+    </category>
+    <category>
+        <pattern>* strong *</pattern>
+        <template><srai>strong</srai></template>
+    </category>
+    <category>
+        <pattern>strong *</pattern>
+        <template><srai>strong</srai></template>
+    </category>
+        <category>
+        <pattern>moderate</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Finnish Spitz.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Finnish-Spitz.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* moderate</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+    <category>
+        <pattern>* moderate *</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+    <category>
+        <pattern>moderate *</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+</topic>
+<topic name="mediumnorthernplaymore">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>strong</pattern>
+        <template>
+            <think>
+                <set name="topic">mediumnorthernstrong</set>
+            </think>
+            Do you want a dog that needs high or low grooming maitenance?
+        </template>
+    </category>
+    <category>
+        <pattern>strong *</pattern>
+        <template><srai>strong</srai></template>
+    </category>
+    <category>
+        <pattern>* strong *</pattern>
+        <template><srai>strong</srai></template>
+    </category>
+    <category>
+        <pattern>* strong</pattern>
+        <template><srai>strong</srai></template>
+    </category>
+    <category>
+        <pattern>low</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Siberian Husky.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Siberian-Husky.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>low *</pattern>
+        <template><srai>low</srai></template>
+    </category>
+    <category>
+        <pattern>* low *</pattern>
+        <template><srai>low</srai></template>
+    </category>
+    <category>
+        <pattern>* low</pattern>
+        <template><srai>low</srai></template>
+    </category>
+</topic>
+<topic name="mediumnorthernstrong">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>low</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Norwegian Buhund.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Norwegian-Buhund.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* low</pattern>
+        <template><srai>low</srai></template>
+    </category>
+     <category>
+        <pattern>* low *</pattern>
+        <template><srai>low</srai></template>
+    </category>
+     <category>
+        <pattern>low *</pattern>
+        <template><srai>low</srai></template>
+    </category>
+    <category>
+        <pattern>high</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Samoyed.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Samoyed.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* high</pattern>
+        <template><srai>high</srai></template>
+    </category>
+     <category>
+        <pattern>* high *</pattern>
+        <template><srai>high</srai></template>
+    </category>
+     <category>
+        <pattern>high *</pattern>
+        <template><srai>high</srai></template>
+    </category>
+</topic>
+<topic name="mediumhound">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand </template>
+    </category>
+    <category>
+        <pattern>strong *</pattern>
+        <template>
+            <think>
+                <set name="topic">mediumhoundex</set>
+            </think>
+            Do you want a breed that needs vigorous daily exercise or normal exercise?
+        </template>
+    </category>
+    <category>
+        <pattern>* strong *</pattern>
+        <template><srai>strong *</srai></template>
+    </category>
+    <category>
+        <pattern>strong</pattern>
+        <template><srai>strong *</srai></template>
+    </category>
+    <category>
+        <pattern>* strong </pattern>
+        <template><srai>strong *</srai></template>
+    </category>
+    <category>
+        <pattern>low</pattern>
+        <template>
+            <think>
+                <set name="topic">mediumhoundlow</set>
+            </think>
+            How much do you want to pay for a dog?More than 800 USD?Less than 800 USD?
+        </template>
+    </category>
+    <category>
+        <pattern>* low *</pattern>
+        <template><srai>low</srai></template>
+    </category>
+        <category>
+        <pattern>low *</pattern>
+        <template><srai>low</srai></template>
+    </category>
+        <category>
+        <pattern>* low</pattern>
+        <template><srai>low</srai></template>
+    </category>
+</topic>
+<topic name="mediumhoundlow">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>More than 800 USD</pattern>
+        <template>
+            <think>
+            <set name="topic">houndmorethan</set>
+            </think>
+            Do you want a dog that requires a moderate or low maintenance?
+        </template>
+    </category>
+    <category>
+        <pattern>more</pattern>
+        <template>
+            <srai>More than 800 USD</srai>
+        </template>
+    </category>
+        <category>
+        <pattern>* more *</pattern>
+        <template>
+            <srai>More than 800 USD</srai>
+        </template>
+    </category>
+            <category>
+        <pattern>* More than 800 USD *</pattern>
+        <template>
+            <srai>More than 800 USD</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>Less than 800 USD</pattern>
+        <template>
+            <think>
+            <set name="topic">houndlessthan</set>
+            </think>
+            Do you want a dog that is friendly to other dogs?
+        </template>
+    </category>
+    <category>
+        <pattern>less</pattern>
+        <template>
+            <srai>less than 800 USD</srai>
+        </template>
+    </category>
+        <category>
+        <pattern>* less *</pattern>
+        <template>
+            <srai>less than 800 USD</srai>
+        </template>
+    </category>
+            <category>
+        <pattern>* less than 800 USD *</pattern>
+        <template>
+            <srai>less than 800 USD</srai>
+        </template>
+    </category>
+</topic>
+<topic name="houndlessthan">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Redbone Connhound.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Redbone-Coonhound.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>I want a dog that is friendly to other dogs</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>yes *</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Thai Ridgeback.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Thai-Ridgeback.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>I do not want a dog that is friendly to other dogs</pattern>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>no *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+</topic>
+<topic name="houndmorethan">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>moderate</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Silken Windhound.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Silken-Windhound.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* moderate *</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+        <category>
+        <pattern>moderate *</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+        <category>
+        <pattern>* moderate</pattern>
+        <template><srai>moderate</srai></template>
+    </category>
+        <category>
+        <pattern>low</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Pharaoh Hound.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Pharaoh-Hound.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* low *</pattern>
+        <template><srai>low</srai></template>
+    </category>
+        <category>
+        <pattern>low *</pattern>
+        <template><srai>low</srai></template>
+    </category>
+        <category>
+        <pattern>* low</pattern>
+        <template><srai>low</srai></template>
+    </category>
+</topic>
+<topic name="mediumhoundex">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>normal</pattern>
+        <template>
+            <think>
+                <set name="topic">houndnormalex</set>
+            </think>
+            Should your dog be easy to train?
+        </template>
+    </category>
+    <category>
+        <pattern>* normal *</pattern>
+        <template><srai>normal</srai></template>
+    </category>
+    <category>
+        <pattern>normal *</pattern>
+        <template><srai>normal</srai></template>
+    </category>
+    <category>
+        <pattern>* normal</pattern>
+        <template><srai>normal</srai></template>
+    </category>
+    <category>
+        <pattern>vigorous daily *</pattern>
+        <template>
+            <think>
+                <set name="topic">mediumhoundexafind</set>
+            </think>
+            What temper should your dog have?Affectionate or independent?
+        </template>
+    </category>
+    <category>
+        <pattern>* vigorous daily *</pattern>
+        <template><srai>vigorous daily *</srai></template>
+    </category>
+    <category>
+        <pattern>vigorous daily</pattern>
+        <template><srai>vigorous daily *</srai></template>
+    </category>
+        <category>
+        <pattern>vigorous</pattern>
+        <template><srai>vigorous daily *</srai></template>
+    </category>
+</topic>
+<topic name="houndnormalex">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Peruvian Inca Orchid.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Peruvian-Inca-Orchid.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should be easy to train</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+        <category>
+        <pattern>* Yes *</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+        <category>
+        <pattern>* Yes </pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Bavarian Mountain Hound.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Bavarian-Mountain-Hound.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should not be easy to train</pattern>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>no *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+        <category>
+        <pattern>* no *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+        <category>
+        <pattern>* no </pattern>
+        <template><srai>no</srai></template>
+    </category>
+</topic>
+
+<topic name="mediumhoundexafind">
+    <category>
+        <pattern>*</pattern>
+        <template>
+            I do not understand
+        </template>
+    </category>
+    <category>
+        <pattern>Independent</pattern>
+            <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Africanis.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Africanis.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>affectionate *</pattern>
+        <template><srai>affectionate</srai></template>
+    </category>
+    <category>
+        <pattern>* affectionate</pattern>
+        <template><srai>affectionate</srai></template>
+    </category>
+        <category>
+        <pattern>* affectionate *</pattern>
+        <template><srai>affectionate</srai></template>
+    </category>
+        <category>
+        <pattern>Affectionate</pattern>
+            <template>
+            <think>
+            <set name="topic">mediumhoundaff</set>
+            </think>
+        Do you want a crossbreed or purebred?
+        </template>
+    </category>
+    <category>
+        <pattern>* independent</pattern>
+        <template><srai>independent</srai></template>
+    </category>
+    <category>
+        <pattern>independent *</pattern>
+        <template><srai>independent</srai></template>
+    </category>
+        <category>
+        <pattern>* independent *</pattern>
+        <template><srai>independent</srai></template>
+    </category>
+</topic>
+<topic name="mediumhoundaff">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>crossbreed</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Ariegeois.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Ariegeois.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* crossbreed</pattern>
+        <template><srai>crossbreed</srai></template>
+    </category>
+    <category>
+        <pattern>crossbreed *</pattern>
+        <template><srai>crossbreed</srai></template>
+    </category>
+        <category>
+        <pattern>* crossbreed *</pattern>
+        <template><srai>crossbreed</srai></template>
+    </category>
+    <category>
+        <pattern>* crossbred</pattern>
+        <template><srai>crossbreed</srai></template>
+    </category>
+        <category>
+        <pattern>crossbred *</pattern>
+        <template><srai>crossbreed</srai></template>
+    </category>
+            <category>
+        <pattern>* crossbred *</pattern>
+        <template><srai>crossbreed</srai></template>
+    </category>
+     <category>
+        <pattern>crossbred</pattern>
+        <template><srai>crossbreed</srai></template>
+    </category>
+        <category>
+        <pattern>purebred</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Basenji.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Basenji.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+            <category>
+        <pattern>* purebred *</pattern>
+        <template><srai>purebred</srai></template>
+    </category>
+    <category>
+        <pattern>* purebred</pattern>
+        <template><srai>purebred</srai></template>
+    </category>
+        <category>
+        <pattern>purebred *</pattern>
+        <template><srai>purebred</srai></template>
+    </category>
+</topic>
+<topic name="mediumterrier">
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+                <set name="topic">mediumterrierfriendly</set>
+            </think>
+            Do you want a dog that is friendly with other dogs?
+        </template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>I want a dog that requires a high grooming maintenance</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+                <set name="topic">mediumterrierwatchdog</set>
+            </think>
+            Do you want a breed with watchdog ability?
+        </template>
+    </category>
+    <category>
+        <pattern>I do not want a dog that requires a high grooming maintenance</pattern>
+        <template><srai>No</srai></template>
+    </category>
+    <cateogry>
+        <pattern>Yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </cateogry>
+        <cateogry>
+        <pattern>No *</pattern>
+        <template><srai>No</srai></template>
+    </cateogry>
+</topic>
+<topic name="mediumterrierwatchdog">
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+                <set name="topic">mediumterrierplayfull</set>
+            </think>
+            Should your dog be playfull?
+        </template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+                <set name="topic">mediumterrierveasy</set>
+            </think>
+            Would you like a breed that is easy to train?
+        </template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>I want a breed with watchdog ability</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>I do not want a breed with watchdog ability</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>No *</pattern>
+        <template><srai>No</srai></template>
+    </category>
+    <category>Yes *</category>
+    <template><srai>Yes</srai></template>
+</topic>
+<topic name="mediumterrierplayfull">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+                <set name="topic">mediumterrierfriendlytd</set>
+            </think>
+            Should your dog be friendly to other dogs?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should be playfull</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+        <category>
+        <pattern>My dog should not be playfull</pattern>
+        <template><srai>No</srai></template>
+    </category>
+    <category>
+        <pattern>No *</pattern>
+        <template><srai>No</srai></template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Staffordshire Bull Terrier.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Staffordshire-Bull-Terrier.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+</topic>
+<topic name="mediumterrierfriendlytd">
+    <category>
+        <pattern>Yes</pattern>
+         <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Kromfohrlander.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Kromfohrlander.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>My dog should be friendly to other dogs</pattern>
+        <template><srai>Yes</srai></template>
+        </category>
+     <category>
+        <pattern>My dog should not be friendly to other dogs</pattern>
+        <template><srai>No</srai></template>
+        </category>
+        <category>
+            <pattern>No</pattern>
+            <template>
+                <think>
+                    <set name="topic">mediumterrieragressive</set>
+                </think>
+                Would you like an aggressive dog?
+            </template>
+        </category>
+        <category>
+            <pattern>Yes *</pattern>
+            <template><srai>Yes</srai></template>
+        </category>
+        <category>
+            <pattern>No *</pattern>
+            <template><srai>No</srai></template>
+        </category>
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+</topic>
+<topic name="mediumterrieragressive">
+    <category>
+        <pattern>yes</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is American Pitbull Terrier.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/American-Pit-Bull-Terrier.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>I would like an aggressive dog</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+ <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Wire Fox Terrier.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Wire-Fox-Terrier.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>I would not like an aggressive dog</pattern>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>no *</pattern>
+        <template><srai>no</srai></template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+</topic>
+<topic name="mediumterrierveasy">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Australian Shepherd.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Australian-Shepherd.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>I would like a breed that is easy to train</pattern>
+        <template><Srai>yes</Srai></template>
+    </category>
+        <category>
+        <pattern>Yes *</pattern>
+        <template><Srai>yes</Srai></template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+                <set name="topic">assertivesweettempered</set>
+            </think>
+            How should be your dog?Assertive or sweet tempered?
+        </template>
+    </category>
+</topic>
+<topic name="assertivesweettempered">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>Assertive</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Austrian Pinscher.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Austrian-Pinscher.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+        <category>
+        <pattern>Sweet tempered</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Bull Terrier.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Bull-Terrier.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* assertive</pattern>
+        <template>
+            <srai>assertive</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* assertive *</pattern>
+        <template>
+            <srai>assertive</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>assertive *</pattern>
+        <template>
+            <srai>assertive</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* sweet tempered</pattern>
+        <template>
+            <srai>sweet tempered</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* sweet tempered *</pattern>
+        <template>
+            <srai>sweet tempered</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>sweet tempered *</pattern>
+        <template>
+            <srai>sweet tempered</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>Sweet</pattern>
+        <template><srai>sweet tempered</srai></template>
+    </category>
+</topic>
+<topic name="mediumterrierfriendly">
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Soft Coated Wheaten Terrier.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Soft-coated-Wheaten-Terrier.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>I want a dog that is friendly to other dogs</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+        <category>
+        <pattern>I do not want a dog that is friendly to other dogs</pattern>
+        <template><srai>No</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+        <category>
+        <pattern>No *</pattern>
+        <template><srai>No</srai></template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+                <set name="topic">mediumterriergentlecourageous</set>
+            </think>
+            How should be your dog?Courageous or gentle?
+        </template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+</topic>
+<topic name="mediumterriergentlecourageous">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>* gentle *</pattern>
+        <template><srai>gentle</srai></template>
+    </category>
+    <category>
+        <pattern>* gentle</pattern>
+        <template><srai>gentle</srai></template>
+    </category>
+    <category>
+        <pattern>gentle *</pattern>
+        <template><srai>gentle</srai></template>
+    </category>
+    <category>
+        <pattern>Gentle</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Kerry Blue Terrier.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Kerry-Blue-Terrier.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+        <category>
+        <pattern>* courageous *</pattern>
+        <template><srai>courageous</srai></template>
+    </category>
+    <category>
+        <pattern>* courageous</pattern>
+        <template><srai>courageous</srai></template>
+    </category>
+    <category>
+        <pattern>courageous *</pattern>
+        <template><srai>courageous</srai></template>
+    </category>
+    <category>
+        <pattern>courageous</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Airedale Terrier.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Airedale-Terrier.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+</topic>
+<topic name="giant">
+    <category>
+        <pattern>I do not care about this</pattern>
+        <template>
+            <think>
+                 <set name="topic">giantcompanion</set>
+            </think>
+            Would you like to have a dog that likes presence of other dogs?
+        </template>
+    </category>
+    <category>
+        <pattern>I want a guardian dog</pattern>
+        <template>
+            <think>
+                 <set name="topic">giantguardian</set>
+            </think>
+            Do you want a dog that requires a low maintenance?
+        </template>
+    </category>
+
+    <category>
+        <pattern>I want a companion dog</pattern>
+        <template>
+            <think>
+                 <set name="topic">giantcompanion</set>
+            </think>
+            Would you like to have a dog that likes presence of other dogs?
+        </template>
+    </category>
+        <category>
+        <pattern>guardian *</pattern>
+        <template>
+            <srai>I want a guardian dog</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>companion *</pattern>
+        <template>
+            <srai>I want a companion dog</srai>
+        </template>
+    </category>
+        <category>
+        <pattern>guardian *</pattern>
+        <template>
+            <srai>I want a guardian dog</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>companion</pattern>
+        <template>
+            <srai>I want a companion dog</srai>
+        </template>
+    </category>
+        <category>
+        <pattern>guardian</pattern>
+        <template>
+            <srai>I want a guardian dog</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* companion *</pattern>
+        <template>
+            <srai>I want a companion dog</srai>
+        </template>
+    </category>
+        <category>
+        <pattern>* guardian *</pattern>
+        <template>
+            <srai>I want a guardian dog</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>companion dog</pattern>
+        <template>
+            <srai>I want a companion dog</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* companion</pattern>
+        <template>
+            <srai>I want a companion dog</srai>
+        </template>
+    </category>
+        <category>
+        <pattern>* guardian</pattern>
+        <template>
+            <srai>I want a guardian dog</srai>
+        </template>
+    </category>
+    <category>
+    <pattern>*</pattern>
+    <template>I do not understand</template>
+</category>
+</topic>
+<topic name="giantguardian">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+                <set name="topic">giantgardianlow</set>
+            </think>
+            Should your dog be good with kids?
+        </template>
+    </category>
+        <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+                <set name="topic">giantgardiannotlow</set>
+            </think>
+            Should your dog be intelligent?
+        </template>
+    </category>
+    <category>
+        <pattern>I want a dog that requires a low maintenance</pattern>
+        <template>
+            <srai>Yes</srai>
+        </template>
+    </category>
+        <category>
+        <pattern>I do not want a dog that requires a low maintenance</pattern>
+        <template>
+            <srai>No</srai>
+        </template>
+    </category>
+</topic>
+<topic name="giantgardiannotlow">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+    <pattern>Yes</pattern>
+    <template>
+        <think>
+            <set name="topic">giantsweetindependent</set>
+        </think>
+        Should your dog be sweet or independent?
+    </template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+                <set name="topic">giantdifficult</set>
+            </think>
+            Would you like a breed that is difficult to train?
+        </template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>No *</pattern>
+        <template><srai>No</srai></template>
+    </category>
+    <category>
+        <pattern>I want a dog that is intelligent</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+    <category>
+        <pattern>I do not want a dog that is intelligent</pattern>
+        <template><srai>No</srai></template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+</topic>
+<topic name="giantdifficult">
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Leonberger.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Leonberger.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+                <set name="topic">giantfearlessgentle</set>
+            </think>
+             Do you want a fearless or gentle dog?
+        </template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>No *</pattern>
+        <template><srai>No</srai></template>
+    </category>
+
+    <category>
+        <pattern>I would like a breed that is difficult to train</pattern>
+        <template><srai>yes</srai></template>
+    </category>
+        <category>
+        <pattern>I would not like a breed that is difficult to train</pattern>
+        <template><srai>no</srai></template>
+    </category>
+
+</topic>
+<topic name="giantfearlessgentle">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>* fearless</pattern>
+        <template><srai>fearless</srai></template>
+    </category>
+    <category>
+        <pattern>* gentle</pattern>
+        <template><srai>gentle</srai></template>
+    </category>
+    <category>
+        <pattern>* fearless *</pattern>
+        <template><srai>fearless</srai></template>
+    </category>
+    <category>
+        <pattern>* gentle *</pattern>
+        <template><srai>gentle</srai></template>
+    </category>
+    <category>
+        <pattern>fearless *</pattern>
+        <template><srai>fearless</srai></template>
+    </category>
+    <category>
+        <pattern>gentle *</pattern>
+        <template><srai>gentle</srai></template>
+    </category>
+    <category>
+        <pattern>fearless</pattern>
+            <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Great Pyrenees.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Great-Pyrenees.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+        <category>
+        <pattern>gentle</pattern>
+            <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is St. Bernard.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/St-Bernard.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+
+</topic>
+<topic name="giantsweetindependent">
+        <category>
+        <pattern>Sweet</pattern>
+            <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Newfoundland.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Newfoundland.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>Independent</pattern>
+            <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Kuvasz.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Kuvasz.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* sweet</pattern>
+        <template><srai>sweet</srai></template>
+    </category>
+    <category>
+        <pattern>* sweet *</pattern>
+        <template><srai>sweet</srai></template>
+    </category>
+    <category>
+        <pattern>sweet *</pattern>
+        <template><srai>sweet</srai></template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand
+        </template>
+    </category>
+</topic>
+<topic name="giantgardianlow">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+                <set name="topic">giantcats</set>
+            </think>
+            Do you want a dog that is friendly to cats?
+        </template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+                <set name="topic">giantagressivestubborn</set>
+            </think>
+            How should be your dog?
+            <ul>
+                <li>Aggressive</li>
+                <li>Stubborn</li>
+            </ul>
+        </template>
+    </category>
+    <category>
+        <pattern>No *</pattern>
+        <template><srai>No</srai></template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template><srai></srai></template>
+    </category>
+    <category>
+        <pattern>My dog should not *</pattern>
+        <template><srai>No</srai></template>
+    </category>
+    <category>
+        <pattern>My dog should not be good with kids</pattern>
+        <template>
+            <srai>No</srai>
+        </template>
+    </category>
+</topic>
+<topic name="giantcats">
+   <category>
+    <pattern>Yes</pattern>
+            <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Mastiff.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/English-Mastiff.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+        </category>
+        <category>
+            <pattern>*</pattern>
+            <template>I do not understand</template>
+        </category>
+        <category>
+            <pattern>Yes *</pattern>
+            <template><srai>yes</srai></template>
+        </category>
+        <category>
+            <pattern>I want a dog that is friendly to cats</pattern>
+            <template><srai>yes</srai></template>
+        </category>
+        <category>
+            <pattern>No</pattern>
+            <template>
+                <think>
+                    <set name="topic">giantnocats</set>
+                </think>
+                Would you like a gentle breed or determined breed?
+            </template>
+        </category>
+</topic>
+<topic name="giantnocats">
+    <category>
+        <pattern>*</pattern>
+    <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>gentle</pattern>
+        <template><srai>gentle breed</srai></template>
+    </category>
+    <category>
+        <pattern>determined</pattern>
+        <template><srai>determined breed</srai></template>
+    </category>
+    <category>
+        <pattern>* determined</pattern>
+        <template><srai>determined breed</srai></template>
+    </category>
+    <category>
+        <pattern>* determined *</pattern>
+        <template><srai>determined breed</srai></template>
+    </category>
+    <category>
+        <pattern>* gentle</pattern>
+        <template><srai>gentle breed</srai></template>
+    </category>
+    <category>
+        <pattern>* gentle *</pattern>
+        <template><srai>gentle breed</srai></template>
+    </category>
+    <category>
+        <pattern>gentle breed</pattern>
+        <template>
+            <think>
+                <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Great Dane.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/English-Mastiff.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+        <category>
+        <pattern>determined breed</pattern>
+        <template>
+            <think>
+                <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Spanish Mastiff.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Spanish-Mastiff.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+
+</topic>
+<topic name="giantagressivestubborn">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>Aggressive</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Pakistani Mastiff.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Pakistani-Mastiff.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* aggressive</pattern>
+        <template><srai>aggresive</srai></template>
+    </category>
+        <category>
+        <pattern>* aggressive *</pattern>
+        <template><srai>aggresive</srai></template>
+    </category>
+        <category>
+        <pattern>aggressive *</pattern>
+        <template><srai>aggresive</srai></template>
+    </category>
+        <category>
+        <pattern>* stubborn</pattern>
+        <template><srai>stubborn</srai></template>
+    </category>
+        <category>
+        <pattern>* stubborn *</pattern>
+        <template><srai>stubborn</srai></template>
+    </category>
+        <category>
+        <pattern>stubborn *</pattern>
+        <template><srai>stubborn</srai></template>
+    </category>
+        <category>
+        <pattern>Stubborn</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+            </think>
+        The breed I recommend you is Neapolitan Mastiff.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Neapolitan-Mastiff.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+</topic>
+<topic name="giantcompanion">
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+                <set name="topic">giantnotfriendlydog</set>
+            </think>
+            Do you want a dog that is difficult to train?
+        </template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+                 <set name="topic">giantfriendlydog</set>
+            </think>
+            Do you want a dog with loyal personality?
+        </template>
+    </category>
+        <category>
+        <pattern>No *</pattern>
+        <template>
+            <srai>No</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>Yes *</pattern>
+        <template>
+            <srai>Yes</srai>
+        </template>
+    </category>
+        <cateogry>
+        <pattern>I do not want a dog likes beeing with other dogs</pattern>
+        <template>
+            <srai>No</srai>
+        </template>
+    </cateogry>
+    <cateogry>
+        <pattern>I want a dog likes beeing with other dogs</pattern>
+        <template>
+            <srai>Yes</srai>
+        </template>
+    </cateogry>
+    <category>
+        <pattern>I would like a dog that likes beeing with other dogs</pattern>
+        <template>
+            <srai>Yes</srai>
+        </template>
+    </category>
+     <category>
+        <pattern>I would not like a dog that likes beeing with other dogs</pattern>
+        <template>
+            <srai>No</srai>
+        </template>
+    </category>
+    <category>
+    <pattern>*</pattern>
+    <template>I do not understand</template>
+</category>
+</topic>
+<topic name="giantnotfriendlydog">
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <think>
+                <set name="topic">gentlecurageous</set>
+            </think>
+            How should be your dog?
+            <ul>
+                <li>Gentle</li>
+                <li>Courageous</li>
+            </ul>
+        </template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+        </think>
+        The breed I recommend you is King Shepherd.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/King-Shepherd.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>I want a breed that is difficult to train</pattern>
+        <template>
+            <srai>Yes</srai>
+        </template>
+    </category>
+        <category>
+        <pattern>I do not want a breed that is difficult to train</pattern>
+        <template>
+            <srai>No</srai>
+        </template>
+    </category>
+ <category>
+        <pattern>not difficult</pattern>
+        <template>
+            <srai>no</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template>
+            <srai>Yes</srai>
+        </template>
+    </category>
+        <category>
+        <pattern>No *</pattern>
+        <template>
+            <srai>No</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+</topic>
+<topic name="gentlecurageous">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+        <category>
+        <pattern>Courageous</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+        </think>
+        The breed I recommend you is Landseer.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Landseer.htmll"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>Gentle</pattern>
+        <template>
+            <think>
+            <set name="topic">happywiththeresult</set>
+        </think>
+        The breed I recommend you is Shiloh Shepherd Dog.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Shiloh-Shepherd-dog.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>* gentle *</pattern>
+        <template><srai>gentle</srai></template>
+    </category>
+        <category>
+        <pattern>* courageous *</pattern>
+        <template><srai>courageous</srai></template>
+    </category>
+    <category>
+        <pattern>* gentle</pattern>
+        <template><srai>gentle</srai></template>
+    </category>
+        <category>
+        <pattern>* courageous</pattern>
+        <template><srai>courageous</srai></template>
+    </category>
+    <category>
+        <pattern>* gentle</pattern>
+        <template><srai>gentle</srai></template>
+    </category>
+        <category>
+        <pattern>* courageous</pattern>
+        <template><srai>courageous</srai></template>
+    </category>
+</topic>
+<topic name="giantfriendlydog">
+    <category>
+        <pattern>I do not want a dog with loyal personality</pattern>
+        <template>
+            <think>
+                <set name="topic">giantloww</set>
+            </think>
+            How much do you want to pay for a dog?More than 1000 USD?Less?
+        </template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <srai>I do not want a dog with loyal personality</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>No *</pattern>
+        <template>
+            <srai>I do not want a dog with loyal personality</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>I do not want</pattern>
+        <template>
+            <srai>I do not want a dog with loyal personality</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>I don't want</pattern>
+        <template>
+            <srai>I do not want a dog with loyal personality</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>I want a dog with loyal personality</pattern>
+        <template>
+        <think>
+            <set name="topic">happywiththeresult</set>
+        </think>
+        The breed I recommend you is Irish Wolfhound.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Irish-Wolfhound.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            <srai>I want a dog with loyal personality</srai>
+        </template>
+    </category>
+    <category>
+    <pattern>*</pattern>
+    <template>I do not understand</template>
+</category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template>
+            <srai>I want a dog with loyal personality</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>I would like a dog with loyal personality</pattern>
+        <template>
+            <srai>Yes</srai>
+        </template>
+    </category>
+</topic>
+<topic name="giantloww">
+    <category>
+        <pattern>less</pattern>
+        <template>
+        <think>
+            <set name="topic">happywiththeresult</set>
+        </think>
+        The breed I recommend you is Greyhound.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Greyhound.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>more</pattern>
+        <template>
+        <think>
+            <set name="topic">happywiththeresult</set>
+        </think>
+        The breed I recommend you is Scottish Deerhound.
+        <br/>Here is a link with the
+        <a href = "http://www.dogbreedslist.info/all-dog-breeds/Scottish-Deerhound.html"> breed.</a>
+		<br/>
+        Are you happy with the result?
+        </template>
+    </category>
+    <category>
+        <pattern>less *</pattern>
+        <template><srai>less</srai></template>
+    </category>
+    <category>
+        <pattern>* less *</pattern>
+        <template><srai>less</srai></template>
+    </category>
+    <category>
+        <pattern>* less</pattern>
+        <template><srai>less</srai></template>
+    </category>
+    <category>
+        <pattern>more *</pattern>
+        <template><srai>more</srai></template>
+    </category>
+    <category>
+        <pattern>* more *</pattern>
+        <template><srai>more</srai></template>
+    </category>
+    <category>
+        <pattern>* more</pattern>
+        <template><srai>more</srai></template>
+    </category>
+</topic>
+<category>
+    <pattern>Thank you</pattern>
+    <template>You are welcome</template>
+</category>
+<category>
+    <pattern>Thanks</pattern>
+    <template>You are welcome</template>
+</category>
+<topic name="happywiththeresult">
+    <category>
+        <pattern>*</pattern>
+        <template>I do not understand</template>
+    </category>
+    <category>
+        <pattern>Yes</pattern>
+        <template>
+            I am happy that I helped you!
+        </template>
+    </category>
+    <category>
+        <pattern>Yes *</pattern>
+        <template>
+            <srai>Yes</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>No *</pattern>
+        <template>
+            <srai>I want a dog</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <srai>I want a dog</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>I am not happy with the result</pattern>
+        <template>
+            <srai>I want a dog</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>I am happy with the result</pattern>
+        <template><srai>Yes</srai></template>
+    </category>
+</topic>
+</aiml>
